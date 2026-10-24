@@ -1,0 +1,93 @@
+#include "MySteppingAction.hh"
+#include "MyRunAction.hh"
+#include "MyEventAction.hh"
+
+#include "G4Step.hh"
+#include "G4Track.hh"
+#include "G4VProcess.hh"
+#include "G4VTouchable.hh"
+#include "G4SystemOfUnits.hh"
+
+// Debug step-by-step (bat bang bien moi truong, KHONG can sua macro/header):
+//   MSA_DEBUG=1 ./yourApp run.mac
+#include "G4LossTableManager.hh"
+#include "G4VEnergyLossProcess.hh"
+#include "G4VEmModel.hh"
+#include "G4MaterialCutsCouple.hh"
+#include <cstdlib>
+
+MySteppingAction::MySteppingAction(MyRunAction* runAction, MyEventAction* eventAction)
+    : G4UserSteppingAction(), fRunAction(runAction), fEventAction(eventAction)
+{
+}
+
+void MySteppingAction::UserSteppingAction(const G4Step* step)
+{
+    auto track = step->GetTrack();
+
+    if (track->GetTrackID() != 1) return;
+
+    auto volume = step->GetPreStepPoint()->GetTouchableHandle()->GetVolume();
+    if (!volume) return;
+    G4String volName = volume->GetName();
+    if (volName != "Sample") return;
+
+    G4String particleName = track->GetDefinition()->GetParticleName();
+
+    // PART 1: GAMMA → record first interaction process
+    if (particleName == "gamma") {
+        if (fEventAction->IsFirstInteractionRecorded()) return;
+
+        auto process = step->GetPostStepPoint()->GetProcessDefinedStep();
+        if (!process) return;
+
+        G4String name = process->GetProcessName();
+        if (name == "Transportation" || name == "CoupledTransportation") return;
+
+        fRunAction->AddProcessCount(name);
+        fEventAction->SetFirstInteractionRecorded();
+        return;
+    }
+
+    // PART 2: CHARGED PARTICLE → accumulate dE and dx for Mass Stopping Power
+    // (Hien khong dung cho output MSP nua - xem MyRunAction::EndOfRunAction,
+    //  da chuyen sang tinh truc tiep bang G4EMCalculator. Van giu accumulate
+    //  o day de co the bat lai cach tinh tracking khi can.)
+    G4double charge = track->GetDefinition()->GetPDGCharge();
+    if (charge != 0.0) {
+        G4double dE = step->GetTotalEnergyDeposit();
+        G4double dx = step->GetStepLength();
+
+        // ===== DEBUG: in tung step de kiem tra step co "nuot gon" ca be
+        // day Sample trong 1 buoc hay khong, va model nao dang duoc dung
+        // (ParamICRU73 / BraggIon / BetheBloch). Dung de doi chieu truoc/
+        // sau khi ap dung SetStepFunctionIons + Region cut rieng cho
+        // Sample. Chay vd: MSA_DEBUG=1 ./app run.mac (nen /run/beamOn 1
+        // tam thoi de log khong bi ngap). =====
+        static const bool dbg = (std::getenv("MSA_DEBUG") != nullptr);
+        if (dbg) {
+            G4String modelName = "?";
+            auto* eLossProc = dynamic_cast<G4VEnergyLossProcess*>(
+                G4LossTableManager::Instance()->GetEnergyLossProcess(track->GetDefinition()));
+            if (eLossProc) {
+                auto* couple = step->GetPreStepPoint()->GetMaterialCutsCouple();
+                if (couple) {
+                    size_t idx = couple->GetIndex();
+                    G4VEmModel* model = eLossProc->SelectModelForMaterial(
+                        step->GetPreStepPoint()->GetKineticEnergy(), idx);
+                    if (model) modelName = model->GetName();
+                }
+            }
+            G4cout << "[MSA_DEBUG] stepNum=" << track->GetCurrentStepNumber()
+                << "  Ekin=" << step->GetPreStepPoint()->GetKineticEnergy() / keV << " keV"
+                << "  dx=" << dx / nm << " nm"
+                << "  dE=" << dE / keV << " keV"
+                << "  model=" << modelName
+                << G4endl;
+        }
+
+        if (dx > 0.0 && dE >= 0.0) {
+            fRunAction->AddIonEnergyLoss(dE, dx);
+        }
+    }
+}
