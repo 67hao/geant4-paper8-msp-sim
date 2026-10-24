@@ -1,21 +1,21 @@
 {
-  "haoidlemystic1": {
+  "haohue27": {
     "1": [
       {
-        "job_name": "S1_alpha_msp",
-        "sample": "S1",
-        "particle": "alpha",
-        "macro_file": "run_S1_alpha.mac",
-        "csv_filename": "S1_alpha_msp.csv"
+        "job_name": "S7_proton_msp",
+        "sample": "S7",
+        "particle": "proton",
+        "macro_file": "run_S7_proton.mac",
+        "csv_filename": "S7_proton_msp.csv"
       }
     ],
     "2": [
       {
-        "job_name": "S5_carbon_msp",
-        "sample": "S5",
-        "particle": "carbon",
-        "macro_file": "run_S5_carbon.mac",
-        "csv_filename": "S5_carbon_msp.csv"
+        "job_name": "S8_proton_msp",
+        "sample": "S8",
+        "particle": "proton",
+        "macro_file": "run_S8_proton.mac",
+        "csv_filename": "S8_proton_msp.csv"
       }
     ],
     "3": [
@@ -35,23 +35,23 @@
     "9": [],
     "10": []
   },
-  "vuicho": {
+  "haoidle4zk": {
     "1": [
       {
-        "job_name": "S1_carbon_msp",
+        "job_name": "S1_alpha_msp",
         "sample": "S1",
-        "particle": "carbon",
-        "macro_file": "run_S1_carbon.mac",
-        "csv_filename": "S1_carbon_msp.csv"
+        "particle": "alpha",
+        "macro_file": "run_S1_alpha.mac",
+        "csv_filename": "S1_alpha_msp.csv"
       }
     ],
     "2": [
       {
-        "job_name": "S5_proton_msp",
-        "sample": "S5",
-        "particle": "proton",
-        "macro_file": "run_S5_proton.mac",
-        "csv_filename": "S5_proton_msp.csv"
+        "job_name": "S4_alpha_msp",
+        "sample": "S4",
+        "particle": "alpha",
+        "macro_file": "run_S4_alpha.mac",
+        "csv_filename": "S4_alpha_msp.csv"
       }
     ],
     "3": [],
@@ -63,23 +63,107 @@
     "9": [],
     "10": []
   },
-  "haoidle4zk": {
+  "htvnhe": {
     "1": [
       {
-        "job_name": "S1_proton_msp",
-        "sample": "S1",
+        "job_name": "S3_proton_msp",
+        "sample": "S3",
         "particle": "proton",
-        "macro_file": "run_S1_proton.mac",
-        "csv_filename": "S1_proton_msp.csv"
+        "macro_file": "run_S3_proton.mac",
+        "csv_filename": "S3_proton_msp.csv"
       }
     ],
     "2": [
       {
-        "job_name": "S6_alpha_msp",
+        "job_name": "S9_carbon_msp",
+        "sample": "S9",
+        "particle": "carbon",
+        "macro_file": "run_S9_carbon.mac",
+        "csv_filename": "S9_carbon_msp.csv"
+      }
+    ],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": [],
+    "10": []
+  },
+  "zotactothesun": {
+    "1": [
+      {
+        "job_name": "S6_carbon_msp",
         "sample": "S6",
+        "particle": "carbon",
+        "macro_file": "run_S6_carbon.mac",
+        "csv_filename": "S6_carbon_msp.csv"
+      }
+    ],
+    "2": [
+      {
+        "job_name": "S3_carbon_msp",
+        "sample": "S3",
+        "particle": "carbon",
+        "macro_file": "run_S3_carbon.mac",
+        "csv_filename": "S3_carbon_msp.csv"
+      }
+    ],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": [],
+    "10": []
+  },
+  "laolaolaoma09": {
+    "1": [
+      {
+        "job_name": "S5_proton_msp",
+        "sample": "S5",
+        "particle": "proton",
+        "macro_file": "run_S5_proton.mac",
+        "csv_filename": "S5_proton_msp.csv"
+      }
+    ],
+    "2": [
+      {
+        "job_name": "S5_alpha_msp",
+        "sample": "S5",
         "particle": "alpha",
-        "macro_file": "run_S6_alpha.mac",
-        "csv_filename": "S6_alpha_msp.csv"
+        "macro_file": "run_S5_alpha.mac",
+        "csv_filename": "S5_alpha_msp.csv"
+      }
+    ],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": [],
+    "10": []
+  },
+  "coredaohaojack": {
+    "1": [
+      {
+        "job_name": "S4_carbon_msp",
+        "sample": "S4",
+        "particle": "carbon",
+        "macro_file": "run_S4_carbon.mac",
+        "csv_filename": "S4_carbon_msp.csv"
+      }
+    ],
+    "2": [
+      {
+        "job_name": "S7_carbon_msp",
+        "sample": "S7",
+        "particle": "carbon",
+        "macro_file": "run_S7_carbon.mac",
+        "csv_filename": "S7_carbon_msp.csv"
       }
     ],
     "3": [],
@@ -94,20 +178,20 @@
   "67hao": {
     "1": [
       {
-        "job_name": "S2_alpha_msp",
-        "sample": "S2",
+        "job_name": "S6_alpha_msp",
+        "sample": "S6",
         "particle": "alpha",
-        "macro_file": "run_S2_alpha.mac",
-        "csv_filename": "S2_alpha_msp.csv"
+        "macro_file": "run_S6_alpha.mac",
+        "csv_filename": "S6_alpha_msp.csv"
       }
     ],
     "2": [
       {
-        "job_name": "S6_carbon_msp",
-        "sample": "S6",
-        "particle": "carbon",
-        "macro_file": "run_S6_carbon.mac",
-        "csv_filename": "S6_carbon_msp.csv"
+        "job_name": "S1_proton_msp",
+        "sample": "S1",
+        "particle": "proton",
+        "macro_file": "run_S1_proton.mac",
+        "csv_filename": "S1_proton_msp.csv"
       }
     ],
     "3": [],
@@ -119,14 +203,42 @@
     "9": [],
     "10": []
   },
-  "idlemystich": {
+  "Bethwl": {
     "1": [
+      {
+        "job_name": "S5_carbon_msp",
+        "sample": "S5",
+        "particle": "carbon",
+        "macro_file": "run_S5_carbon.mac",
+        "csv_filename": "S5_carbon_msp.csv"
+      }
+    ],
+    "2": [
       {
         "job_name": "S2_carbon_msp",
         "sample": "S2",
         "particle": "carbon",
         "macro_file": "run_S2_carbon.mac",
         "csv_filename": "S2_carbon_msp.csv"
+      }
+    ],
+    "3": [],
+    "4": [],
+    "5": [],
+    "6": [],
+    "7": [],
+    "8": [],
+    "9": [],
+    "10": []
+  },
+  "fewhourtorelax": {
+    "1": [
+      {
+        "job_name": "S8_alpha_msp",
+        "sample": "S8",
+        "particle": "alpha",
+        "macro_file": "run_S8_alpha.mac",
+        "csv_filename": "S8_alpha_msp.csv"
       }
     ],
     "2": [
@@ -150,11 +262,11 @@
   "CarwynDuc": {
     "1": [
       {
-        "job_name": "S2_proton_msp",
-        "sample": "S2",
-        "particle": "proton",
-        "macro_file": "run_S2_proton.mac",
-        "csv_filename": "S2_proton_msp.csv"
+        "job_name": "S8_carbon_msp",
+        "sample": "S8",
+        "particle": "carbon",
+        "macro_file": "run_S8_carbon.mac",
+        "csv_filename": "S8_carbon_msp.csv"
       }
     ],
     "2": [
@@ -175,7 +287,7 @@
     "9": [],
     "10": []
   },
-  "laolaolaoma09": {
+  "haoidlemystic1": {
     "1": [
       {
         "job_name": "S3_alpha_msp",
@@ -187,39 +299,11 @@
     ],
     "2": [
       {
-        "job_name": "S7_carbon_msp",
-        "sample": "S7",
-        "particle": "carbon",
-        "macro_file": "run_S7_carbon.mac",
-        "csv_filename": "S7_carbon_msp.csv"
-      }
-    ],
-    "3": [],
-    "4": [],
-    "5": [],
-    "6": [],
-    "7": [],
-    "8": [],
-    "9": [],
-    "10": []
-  },
-  "Bethwl": {
-    "1": [
-      {
-        "job_name": "S3_carbon_msp",
-        "sample": "S3",
-        "particle": "carbon",
-        "macro_file": "run_S3_carbon.mac",
-        "csv_filename": "S3_carbon_msp.csv"
-      }
-    ],
-    "2": [
-      {
-        "job_name": "S7_proton_msp",
-        "sample": "S7",
+        "job_name": "S2_proton_msp",
+        "sample": "S2",
         "particle": "proton",
-        "macro_file": "run_S7_proton.mac",
-        "csv_filename": "S7_proton_msp.csv"
+        "macro_file": "run_S2_proton.mac",
+        "csv_filename": "S2_proton_msp.csv"
       }
     ],
     "3": [],
@@ -231,91 +315,7 @@
     "9": [],
     "10": []
   },
-  "coredaohaojack": {
-    "1": [
-      {
-        "job_name": "S3_proton_msp",
-        "sample": "S3",
-        "particle": "proton",
-        "macro_file": "run_S3_proton.mac",
-        "csv_filename": "S3_proton_msp.csv"
-      }
-    ],
-    "2": [
-      {
-        "job_name": "S8_alpha_msp",
-        "sample": "S8",
-        "particle": "alpha",
-        "macro_file": "run_S8_alpha.mac",
-        "csv_filename": "S8_alpha_msp.csv"
-      }
-    ],
-    "3": [],
-    "4": [],
-    "5": [],
-    "6": [],
-    "7": [],
-    "8": [],
-    "9": [],
-    "10": []
-  },
-  "htvnhe": {
-    "1": [
-      {
-        "job_name": "S4_alpha_msp",
-        "sample": "S4",
-        "particle": "alpha",
-        "macro_file": "run_S4_alpha.mac",
-        "csv_filename": "S4_alpha_msp.csv"
-      }
-    ],
-    "2": [
-      {
-        "job_name": "S8_carbon_msp",
-        "sample": "S8",
-        "particle": "carbon",
-        "macro_file": "run_S8_carbon.mac",
-        "csv_filename": "S8_carbon_msp.csv"
-      }
-    ],
-    "3": [],
-    "4": [],
-    "5": [],
-    "6": [],
-    "7": [],
-    "8": [],
-    "9": [],
-    "10": []
-  },
-  "haohue27": {
-    "1": [
-      {
-        "job_name": "S4_carbon_msp",
-        "sample": "S4",
-        "particle": "carbon",
-        "macro_file": "run_S4_carbon.mac",
-        "csv_filename": "S4_carbon_msp.csv"
-      }
-    ],
-    "2": [
-      {
-        "job_name": "S8_proton_msp",
-        "sample": "S8",
-        "particle": "proton",
-        "macro_file": "run_S8_proton.mac",
-        "csv_filename": "S8_proton_msp.csv"
-      }
-    ],
-    "3": [],
-    "4": [],
-    "5": [],
-    "6": [],
-    "7": [],
-    "8": [],
-    "9": [],
-    "10": []
-  },
-  "fewhourtorelax": {
+  "idlemystich": {
     "1": [
       {
         "job_name": "S4_proton_msp",
@@ -343,23 +343,23 @@
     "9": [],
     "10": []
   },
-  "zotactothesun": {
+  "vuicho": {
     "1": [
       {
-        "job_name": "S5_alpha_msp",
-        "sample": "S5",
+        "job_name": "S2_alpha_msp",
+        "sample": "S2",
         "particle": "alpha",
-        "macro_file": "run_S5_alpha.mac",
-        "csv_filename": "S5_alpha_msp.csv"
+        "macro_file": "run_S2_alpha.mac",
+        "csv_filename": "S2_alpha_msp.csv"
       }
     ],
     "2": [
       {
-        "job_name": "S9_carbon_msp",
-        "sample": "S9",
+        "job_name": "S1_carbon_msp",
+        "sample": "S1",
         "particle": "carbon",
-        "macro_file": "run_S9_carbon.mac",
-        "csv_filename": "S9_carbon_msp.csv"
+        "macro_file": "run_S1_carbon.mac",
+        "csv_filename": "S1_carbon_msp.csv"
       }
     ],
     "3": [],
